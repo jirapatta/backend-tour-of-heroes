@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
-import javax.websocket.server.PathParam
-
 @RestController
 @RequestMapping('/heroes')
 @CrossOrigin('http://localhost:4200')
@@ -69,6 +67,7 @@ class HeroController {
 
         log.debug "add with id: ${hero.id}"
         heroMap.add(hero)
+
         return hero
     }
 
